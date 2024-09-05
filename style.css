@@ -1,0 +1,129 @@
+/* CSS VARIABLES */
+:root {
+  /* PRIMARY COLORS */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* NEUTRAL COLORS */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  /* FONTS */
+  --Lexend-Deca: "Lexend Deca", sans-serif;
+  --Big-Shoulders-Display: "Big Shoulders Display", sans-serif;
+}
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 64px;
+  height: 40px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-light-gray);
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 307px;
+  padding: 3rem 2.969rem;
+}
+
+.card-sedans > a {
+  color: var(--Bright-orange);
+}
+
+.card-suv > a {
+  color: var(--Dark-cyan);
+}
+
+.card-luxury > a {
+  color: var(--Very-dark-cyan);
+}
+
+.card > h1 {
+  color: var(--Very-light-gray);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: var(--Big-Shoulders-Display);
+  font-weight: bold;
+  padding-top: 2.188rem;
+  padding-bottom: 1.563rem;
+}
+
+.card > p {
+  color: white;
+  font-size: 0.938rem;
+  line-height: 25px;
+  font-family: var(--Lexend-Deca);
+  font-weight: 300;
+  max-width: 212px;
+  padding-bottom: 5.188rem;
+}
+
+.card > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-light-gray);
+  text-decoration: none;
+  font-size: 0.938rem;
+  width: 146px;
+  height: 48px;
+  border-radius: 25px;
+  font-family: var(--Lexend-Deca);
+}
+
+.card > a:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.card-sedans {
+  border-radius: 8px 0px 0px 8px;
+  background-color: var(--Bright-orange);
+}
+
+.card-suv {
+  background-color: var(--Dark-cyan);
+}
+
+.card-luxury {
+  border-radius: 0px 8px 8px 0px;
+  background-color: var(--Very-dark-cyan);
+}
+
+@media screen and (min-width: 927px) {
+  body {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 927px) {
+  .card-wrapper {
+    padding: 5.5rem 0rem;
+    flex-direction: column;
+  }
+}
